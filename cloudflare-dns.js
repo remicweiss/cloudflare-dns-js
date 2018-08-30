@@ -25,7 +25,7 @@ function getIP(what,type)
                 if(typeof (JSON.parse(this.responseText).Answer) === "undefined")
                     resolve(null);
                 else
-                    resolve(JSON.parse(this.responseText));
+                    resolve(JSON.parse(this.responseText).Answer[0].data);
             }
             else if (this.readyState === 4 && this.status !== 200) {
                 resolve({Status: -1, requestStatus: this.status});
