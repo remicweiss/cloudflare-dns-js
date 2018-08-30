@@ -10,5 +10,5 @@ var ip = await getIP("google.com","A")
 
 Example call for the full response (https://developers.cloudflare.com/1.1.1.1/dns-over-https/json-format/):
 ```javascript
-var ip = await resolve("google.com","A")
+var response = await resolve("google.com","A")
 ```
