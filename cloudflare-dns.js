@@ -13,13 +13,11 @@ class CloudflareDns {
     }
 
     static getIPv4(domain, response) {
-
         function interResolve(data) { (typeof (data.Answer) === "undefined" ? response(null) : response(data.Answer[0].data)) }
         this.resolve(domain, "A", interResolve);
     }
 
     static getIPv6(domain, response) {
-
         function interResolve(data) { (typeof (data.Answer) === "undefined" ? response(null) : response(data.Answer[0].data)) }
         this.resolve(domain, "AAAA", interResolve);
     }
