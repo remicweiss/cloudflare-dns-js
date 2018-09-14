@@ -2,13 +2,12 @@
 
 Two functions that help with getting dns info in javascript. It uses the cloudflare DNS services, specifically https://developers.cloudflare.com/1.1.1.1/dns-over-https/. The code is native javascript.
 
-Example call for the simple method:
-
+Example call for get IP method (returns ip to the callback function):
 ```javascript
-var ip = await getIP("google.com","A")
+CloudflareDNS.getIPv4("google.com",callbackFunction);
 ```
 
-Example call for the full response (https://developers.cloudflare.com/1.1.1.1/dns-over-https/json-format/):
+Example call for the full response (returns https://developers.cloudflare.com/1.1.1.1/dns-over-https/json-format/ to the callback function):
 ```javascript
-var response = await resolve("google.com","A")
+CloudflareDNS.getIPv4("google.com","A",callbackFunction);
 ```
